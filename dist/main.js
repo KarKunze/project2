@@ -13,7 +13,7 @@ let nine = document.getElementById('nine');
 let ten = document.getElementById('ten');
 let eleven = document.getElementById('eleven');
 let twelve = document.getElementById('twelve');
-let url = "http://entree-s18.herokuapp.com/v1/menu/12";
+let url = "https://entree-s18.herokuapp.com/v1/menu/12";
 let apiRequest;
 
 getMenu(url);
@@ -45,7 +45,7 @@ function catchResponse() {
 
   if (apiRequest.statusText === "OK") {
     let response = JSON.parse(apiRequest.responseText);
-    
+
 
     date.innerHTML = "Updated at " + response.created_at.date;
     one.innerHTML = response.menu_items[0].description;
