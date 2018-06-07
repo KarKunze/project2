@@ -2,12 +2,21 @@
   height: 120px;
   font-family: 'Source Sans Pro', sans-serif;
   border-radius: 5px !important;
+  z-index: 9999;
+
 }
 
 .navbar-brand{
   font-family: 'Lobster', cursive;
   font-size: 30px;
   margin-left: 10px;
+}
+
+ul.navbar-nav {
+  background-color: #969F95;
+  opacity: .75;
+  font-weight: bolder;
+  padding-right: 5px;
 }
 
 
