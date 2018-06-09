@@ -1,8 +1,8 @@
 .navbar {
   height: 120px;
   font-family: 'Source Sans Pro', sans-serif;
-  border-radius: 5px !important;
-  z-index: 9999; }
+  border-radius: 5px;
+  z-index: 900; }
 
 .navbar-brand {
   font-family: 'Lobster', cursive;
@@ -14,6 +14,9 @@ ul.navbar-nav {
   opacity: .75;
   font-weight: bolder;
   padding-right: 5px; }
+
+.carousel-inner {
+  margin-top: 10px; }
 
 .container-fluid {
   background-color: #969F95;
