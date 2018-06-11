@@ -28,4 +28,10 @@ gulp.task('serve', ['sass'], function() {
     gulp.watch("app/*.html").on('change', browserSync.reload);
 });
 
+// copy app to dist
+gulp.task('copy', function() {
+  return gulp.src('app/**/*')
+      .pipe(gulp.dest('dist/'))
+});
+
 gulp.task('default', ['js','serve']);
