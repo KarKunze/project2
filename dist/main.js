@@ -46,8 +46,10 @@ function catchResponse() {
   if (apiRequest.statusText === "OK") {
     let response = JSON.parse(apiRequest.responseText);
 
+    // readableDate(response.created_at.date);
 
-    date.innerHTML = "Updated at " + response.created_at.date;
+    // date.innerHTML = "Updated at " + response.created_at.date;
+    date.innerHTML = "Updated on " + readableDate(response.created_at.date);
     one.innerHTML = response.menu_items[0].description;
     two.innerHTML = response.menu_items[1].description;
     three.innerHTML = response.menu_items[2].description;
@@ -63,11 +65,14 @@ function catchResponse() {
 		// output.style.display = 'block';
   }
 }
-//
-// function getDate() {
-//  var now = new Date();
-//  var month = now.getMonth();
-//  var day = now.getDay();
-//  var year = now.getFullYear();
-//  date.innerHTML = month + " " + day + ", " + year;
-// }
+
+    function readableDate(dateCreated) {
+      // console.log("readableDate");
+      dateCreated = dateCreated.split(" ");
+      // console.log(dateCreated);
+      dateCreated = dateCreated[0];
+      // console.log(dateCreated);
+      dateCreated = dateCreated.split("-");
+      // console.log(dateCreated);
+      return dateCreated[1] + "-" + dateCreated[2] + "-" + dateCreated[0];
+    }
