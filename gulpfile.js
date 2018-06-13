@@ -28,10 +28,11 @@ gulp.task('serve', ['sass'], function() {
     gulp.watch("app/*.html").on('change', browserSync.reload);
 });
 
-// copy app to dist
+// copy app to dist -- must type gulp copy
 gulp.task('copy', function() {
   return gulp.src('app/**/*')
       .pipe(gulp.dest('dist/'))
 });
 
+// default update of all files in app and browsersync -- just type gulp
 gulp.task('default', ['js','serve']);
